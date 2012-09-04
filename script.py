@@ -14,6 +14,8 @@ def foo():
 
     print("prev: ", prev)
 
+    os.system(get_time_command)
+
     f = open('current_time', 'r')
     curr = 0
     for i in f:
@@ -23,7 +25,7 @@ def foo():
 
     f.close()
 
-    f = open('current_time', 'w')
+    f = open('prev', 'w')
     f.write(str(curr))
     f.close()
 
